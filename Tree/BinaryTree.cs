@@ -69,5 +69,22 @@ namespace Tree
             }
             Console.WriteLine($"{root.Data}");
         }
+
+        public void BreadFirstTraversalsLevelOrderTraversal(Node root)
+        {
+            Queue<Node> nodes = new Queue<Node>();
+            Node actual;
+
+            nodes.Enqueue(root);
+
+            while (nodes.TryDequeue(out actual))
+            {
+                Console.WriteLine($"{actual.Data}");
+                if (actual.Left != null)
+                    nodes.Enqueue(actual.Left);
+                if (actual.Right != null)
+                    nodes.Enqueue(actual.Right);
+            }
+        }
     }
 }

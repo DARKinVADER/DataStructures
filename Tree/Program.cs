@@ -19,6 +19,8 @@ namespace Tree
             binaryTree.DepthFirstTraversalsPreOrderTraversal(binaryTree.Root);
             Console.WriteLine("PostOrder Traversal");
             binaryTree.DepthFirstTraversalsPostOrderTraversal(binaryTree.Root);
+            Console.WriteLine("LevelOrder Traversal");
+            binaryTree.BreadFirstTraversalsLevelOrderTraversal(binaryTree.Root);
 
             /*
                The left subtree of a node contains only nodes with keys lesser than the node’s key.
@@ -55,7 +57,8 @@ namespace Tree
             binarySearchTree.DepthFirstTraversalsPreOrderTraversal(binarySearchTree.Root);
             Console.WriteLine("PostOrder Traversal");
             binarySearchTree.DepthFirstTraversalsPostOrderTraversal(binarySearchTree.Root);
-
+            Console.WriteLine("LevelOrder Traversal");
+            binarySearchTree.BreadFirstTraversalsLevelOrderTraversal(binarySearchTree.Root);
         }
     }
 }
