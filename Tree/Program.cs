@@ -11,6 +11,14 @@ namespace Tree
             binaryTree.Root.Left = new Node(2);
             binaryTree.Root.Right = new Node(3);
             binaryTree.Root.Left.Left = new Node(4);
+            binaryTree.Root.Left.Right = new Node(5);
+
+            Console.WriteLine("InOrder Traversal");
+            binaryTree.DepthFirstTraversalsInOrderTraversal(binaryTree.Root);
+            Console.WriteLine("PreOrder Traversal");
+            binaryTree.DepthFirstTraversalsPreOrderTraversal(binaryTree.Root);
+            Console.WriteLine("PostOrder Traversal");
+            binaryTree.DepthFirstTraversalsPostOrderTraversal(binaryTree.Root);
 
             /*
                The left subtree of a node contains only nodes with keys lesser than the node’s key.
@@ -29,6 +37,8 @@ namespace Tree
             binarySearchTree.Insert(14);
             binarySearchTree.Insert(13);
 
+            Console.WriteLine("BSTk");
+
             int searchFor = 7;
             Console.WriteLine($"{searchFor} exists in BST: {binarySearchTree.Exists(searchFor)}");
             searchFor = 17;
@@ -38,6 +48,13 @@ namespace Tree
             Console.WriteLine($"{searchFor} found in BST: {binarySearchTree.Search(binarySearchTree.Root, searchFor) != null}");
             searchFor = 17;
             Console.WriteLine($"{searchFor} found in BST: {binarySearchTree.Search(binarySearchTree.Root, searchFor) != null}");
+
+            Console.WriteLine("InOrder Traversal");
+            binarySearchTree.DepthFirstTraversalsInOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("PreOrder Traversal");
+            binarySearchTree.DepthFirstTraversalsPreOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("PostOrder Traversal");
+            binarySearchTree.DepthFirstTraversalsPostOrderTraversal(binarySearchTree.Root);
 
         }
     }
