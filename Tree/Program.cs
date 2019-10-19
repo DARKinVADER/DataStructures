@@ -30,9 +30,15 @@ namespace Tree
             binarySearchTree.Insert(13);
 
             int searchFor = 7;
-            Console.WriteLine($"{searchFor} exists in BST: {binarySearchTree.Search(searchFor)}");
+            Console.WriteLine($"{searchFor} exists in BST: {binarySearchTree.Exists(searchFor)}");
             searchFor = 17;
-            Console.WriteLine($"{searchFor} exists in BST: {binarySearchTree.Search(searchFor)}");
+            Console.WriteLine($"{searchFor} exists in BST: {binarySearchTree.Exists(searchFor)}");
+
+            searchFor = 7;
+            Console.WriteLine($"{searchFor} found in BST: {binarySearchTree.Search(binarySearchTree.Root, searchFor) != null}");
+            searchFor = 17;
+            Console.WriteLine($"{searchFor} found in BST: {binarySearchTree.Search(binarySearchTree.Root, searchFor) != null}");
+
         }
     }
 }

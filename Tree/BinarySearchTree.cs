@@ -12,7 +12,18 @@ namespace Tree
             Root = InsertNode(data, actual);
         }
 
-        public bool Search(int data)
+        public Node Search(Node actual, int data)
+        {
+            if (actual == null || actual.Data == data)
+                return actual;
+
+            if (actual.Data > data)
+                return Search(actual.Left, data);
+            else
+                return Search(actual.Right, data);
+        }
+
+        public bool Exists(int data)
         {
             Node actual = Root;
 
